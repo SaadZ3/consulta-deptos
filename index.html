@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <title>Modelo</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <!--JavaScript CDNs-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+   
+    
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+</head>
+
+<body>
+    <div class="div-body">
+        <section class="container">
+            <h1>Consultar Departamentos</h1>
+
+
+            <form class="consultar">
+                <div> 
+                    <input id="iptConsulta" type="text" autocomplete="off" autofocus="true" required>
+                    <button type="button" id="clearInput" style="display: none;">&times;</button>
+                    <button id="btnConsultar"> Enviar
+                    </button>
+                </div>
+
+                <ul id="listaDeptos">
+                </ul>
+                
+                <!-- <button id="btnConsultar">Enviar</button>  -->
+            </form>
+        </section>
+
+        <script src="./assets/js/main.js"></script>
+    </div>
+</body>
+
+</html>

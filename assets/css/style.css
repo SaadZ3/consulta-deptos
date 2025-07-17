@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+:root {
+    --primary-color: rgb(27, 27, 27);
+    --second-color: rgb(27, 27, 27);
+    --branco: rgb(255, 255, 255);
+    --cinza3: #171717;
+    --cinza2: #212121;
+    --cinza1: #2f2f2f;
+    --cinza0: #d4d4d4;
+
+}
+
+* {
+    box-sizing: border-box;
+    outline: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: var(--cinza2);
+    font-family: 'Opens sans', sans-serif;
+    font-size: 1.3em;
+    line-height: 1.5em;
+}
+
+.div-body {
+    /* background-color: red; */
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    
+}
+
+.container {
+    max-width: 940px;
+    margin: 50px auto;
+    background-color:  var(--cinza3);
+    padding: 20px;
+    border-radius: 20px;
+    position: relative;
+    
+}
+
+.container h1, h3, p {
+    color: white;
+}
+form {
+    position: relative;
+}
+form input, form label, form button {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    
+}
+
+form div {
+    display: flex;
+    position: relative;
+    width: 100%;
+}
+
+form input {
+    flex: 1;
+    font-size: 15px;
+    height: 40px;
+    padding: 0 10px;
+    border-radius: 15px;
+}
+
+
+
+/* clearrrrrr */
+#iptConsulta {
+    flex: 1;
+    font-size: 15px;
+    height: 40px;
+    padding: 0 40px 0 10px; /* espaço para o 'x' */
+    border-radius: 15px;
+}
+#clearInput {
+    color: var(--cinza1);
+    position: absolute;
+    right: 73px; /* Ajuste conforme necessário */
+    top: 30%;
+    transform: translateY(-50%);
+    border: none;
+    background: transparent;
+    color: var(--primary-color);
+    font-size: 40px;
+    cursor: pointer;
+    z-index: 4000;
+}
+
+
+
+
+#clearInput:hover {
+    color: rgb(66, 2, 78);
+}
+
+form input:focus {
+    outline: 1px solid var(--primary-color);
+}
+
+ul {
+    display: none;   
+    width: 100%; /* Ajusta a largura para ser igual ao input */
+    list-style-type: none;
+    margin:0;
+    padding:0;
+    position: absolute;
+    top: calc(100% + 5px); /* Define a lista logo abaixo do input com um pequeno espaçamento */
+    left: 0; /* Garante que esteja alinhado à esquerda do input */
+    background: #f6f6f6;
+    z-index: 1000; /* Garante que fique acima de outros elementos */
+    border-radius: 5px; /* Opcional: arredonda os cantos da lista */
+    border: 1px solid #ddd;
+
+}
+ul li {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-size:18px;
+    color: black;
+    border: 1px solid #ddd;
+    background: #f6f6f6;
+    padding: 12px;
+    
+}
+
+ul li:hover, ul li.selecionado{
+    background: #a7a7a7;
+    cursor: pointer;
+}
+.item-name{
+    margin-left:15px;
+}
+
+
+form button {
+    position: absolute;
+    right: 10px;
+    top: 40%;
+    transform: translateY(-50%);
+    border: none;
+    background: var(--primary-color);
+    color: var(--branco);
+    border-radius: 17px;
+    width: 80px;
+    height: 33px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    font-weight: 500px;
+    cursor: pointer;
+
+}
+
+form button:hover {
+    background-color: rgb(66, 2, 78);
+}
+
+
+#infos {
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 15px;
+    background: var(--cinza2);
+    color: #333;
+    font-family: 'Open Sans', sans-serif;
+    /* box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.438); */
+    display: flex;
+    flex-wrap: wrap;
+     display: grid; /*
+    grid-template-columns: 1fr 1fr; Layout 2x2 */
+    gap: 20px; /* Espaçamento entre itens */
+}
+
+#infos h3 {
+    grid-column: span ; /* Faz o título ocupar as duas colunas */
+    font-size: 1.8em;
+    font-weight: 40px;
+    color: var(--branco);
+    margin-bottom: 30px;
+    border-bottom: 2px solid var(--branco);
+    padding-bottom: 20px;
+    /* text-align: center; */
+}
+
+.info-box {
+    /* flex-direction: column; */
+    /* align-items: flex-start; */
+    /* justify-content: center; */
+    padding: 10px;
+    /* border: 1px solid #ddd; */
+    /* box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.164); */
+
+    border-radius: 10px;
+    background: var(--cinza1);
+    flex: 1 1 45%;
+    margin-top: 0px;
+    /* gap: 5px; */
+}
+
+.info-box i {
+    color: var(--branco);
+    font-size: 1.0em;
+}
+
+.info-box span {
+    align-items: center;
+    font-weight: bold;
+    color: var(--branco);
+    font-size: 1.2em;
+}
+
+.info-box p {
+    margin: 0;
+    font-size: 0.93em;
+    color: var(--cinza0);
+    word-break: break-word; /* Permite quebra de texto para e-mails longos */
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width: 550px) {
+    ul {
+        top: 73%;
+    }
+}
+@media screen and (max-width: 449px) {
+    ul {
+        top: 75%;
+    }
+}
